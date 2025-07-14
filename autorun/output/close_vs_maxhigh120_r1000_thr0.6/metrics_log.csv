@@ -1,0 +1,3 @@
+timestamp,y_type,threshold,feature_set,label_0_precision,label_0_recall,label_1_precision,label_1_recall,accuracy
+2025-07-13 20:04:07,close_vs_maxhigh120_r1000,0.6,1,1.0,0.9997108002944579,0.0,0.0,0.9997108002944579
+2025-07-13 20:05:40,close_vs_maxhigh120_r1000,0.6,2,1.0,0.9997370911767799,0.0,0.0,0.9997370911767799

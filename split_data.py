@@ -5,9 +5,9 @@ from tqdm import tqdm
 # ================================
 # CẤU HÌNH NGƯỜI DÙNG
 # ================================
-FILE_PREFIX = "TRX"                                             # Biến có thể thay đổi
-input_file = f"data/{FILE_PREFIX}/TRX_2025-06-13_03-54-57.csv"  # Đường dẫn file CSV
-output_dir = f"data/{FILE_PREFIX}/output"                       # Thư mục lưu kết quả                        
+FILE_PREFIX = "SOL"                                             # Biến có thể thay đổi
+input_file = '/home/shared_data/SOL/SOL_2025-03-01_00-00-00.csv'  # Đường dẫn file CSV
+output_dir = f"/home/shared_data/{FILE_PREFIX}/output"                       # Thư mục lưu kết quả                        
 
 print(f"Đang xử lý file: {input_file}")
 print(f"Prefix cho tên file đầu ra: {FILE_PREFIX}")

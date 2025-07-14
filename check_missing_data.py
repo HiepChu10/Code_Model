@@ -9,7 +9,7 @@ from tqdm import tqdm
 # Đường dẫn file
 # ============================
 FILE_PREFIX = "TRX"   
-file_path = f"data/{FILE_PREFIX}/TRX_2025-06-13_03-54-57.csv"  # Đổi đường dẫn
+file_path = '/home/shared_data/SOL/SOL_2025-03-01_00-00-00.csv'  # Đổi đường dẫn
 
 print(f"\nĐang xử lý file: {file_path}")
 

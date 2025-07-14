@@ -10,29 +10,30 @@ import os
 
 # --- KẾT NỐI CLICKHOUSE ---
 CLICKHOUSE_HOST = '117.0.34.78'
-CLICKHOUSE_PORT = 8123
+CLICKHOUSE_PORT = 8124
 CLICKHOUSE_USER = 'looker'
 CLICKHOUSE_PASSWORD = ''
 DATABASE_NAME = 'binance_data_indicator'
 
 # --- CẤU HÌNH TRUY VẤN ---
-TABLE_A = 'trxusdt_1m_extended'         # Đổi tên bảng
-TABLE_B = 'trxusdt_1m_forward_ohlc'     # Đổi tên bảng
+TABLE_A = 'solusdt_1m_extended'         # Đổi tên bảng
+TABLE_B = 'solusdt_1m_forward_ohlc'     # Đổi tên bảng
 
 # --- THỜI GIAN TRUY VẤN ---
-start_time = datetime.strptime('2018-06-11 11:30:00', '%Y-%m-%d %H:%M:%S').replace(tzinfo=timezone.utc)     # Thay đổi thời gian sàn 
+start_time = datetime.strptime('2025-03-01 00:01:00', '%Y-%m-%d %H:%M:%S').replace(tzinfo=timezone.utc)     # Thay đổi thời gian sàn 
 end_time = datetime.now(timezone.utc)
+# end_time = datetime.strptime('2025-03-01 00:00:00', '%Y-%m-%d %H:%M:%S').replace(tzinfo=timezone.utc)     # Thay đổi thời gian sàn 
 
 # --- BATCH CONFIG ---
 BATCH_SIZE_MINUTES = 30000  # tương ứng 30,000 dòng
 
 # --- TẠO TÊN FILE TỪ end_time ---
-FILE_PREFIX = "TRX"                                 # Biến tiền tố có thể thay đổi
+FILE_PREFIX = "SOL"                                 # Biến tiền tố có thể thay đổi
 FILE_NAME = end_time.strftime('%Y-%m-%d_%H-%M-%S')  # Định dạng để tránh ký tự không hợp lệ trong tên file
-OUTPUT_FILE = f'data/{FILE_PREFIX}/{FILE_PREFIX}_{FILE_NAME}.csv'          
+OUTPUT_FILE = f'/home/shared_data/{FILE_PREFIX}/{FILE_PREFIX}_{FILE_NAME}.csv'          
 
 # --- KIỂM TRA THƯ MỤC data VÀ LƯU FILE ---
-os.makedirs(f'data/{FILE_PREFIX}', exist_ok=True)              
+os.makedirs(f'/home/shared_data/{FILE_PREFIX}', exist_ok=True)              
 if os.path.exists(OUTPUT_FILE):
     os.remove(OUTPUT_FILE)
 

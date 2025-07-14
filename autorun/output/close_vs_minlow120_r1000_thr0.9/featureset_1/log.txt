@@ -1,0 +1,58 @@
+📊 Processing: close_vs_minlow120_r1000 with threshold 0.9
+📁 Loading main data...
+📊 Loaded 3,974,367 rows, 175 columns
+🔧 Optimizing data types to save memory (using float32)...
+💾 Memory optimized: 5533.8MB → 1633.6MB
+💰 Saved: 3900.2MB (70.5%) - Using float32
+🔧 Features converted to float32
+🧹 Memory cleared. Available: 39.2GB (57.3% used)
+Số lượng giá trị 0: 3,965,052
+Số lượng giá trị 1: 9,315
+Tổng số bản ghi: 3,974,367
+✂️  Splitting data into train/test sets...
+📊 Train: 2,782,056 samples, Test: 1,192,311 samples
+
+📊 Tỷ lệ nhãn tập train:
+   Nhãn 0: 99.8%
+   Nhãn 1: 0.2%
+📊 Estimated memory usage:
+   Float64: 318.4MB
+   Float32: 159.2MB
+   Savings: 159.2MB (50.0%)
+🔄 Converting training data to float32...
+📊 Training data memory: 180.4MB (train) + 77.3MB (test)
+💰 Float32 conversion saved: 0.0MB
+🧹 Memory cleared. Available: 39.2GB (57.3% used)
+🚀 Starting model training...
+⚖️  Scale pos weight: 427.140
+🌳 Using histogram-based tree method with float32 optimization
+🎯 Training on 2,782,056 samples with 15 features
+⏱️ Training completed in 11.32 seconds
+
+Báo cáo phân loại (Tập Test):
+0            Precision: 1.00  Recall: 1.00  F1-score: 1.00  Support: 1189494
+1            Precision: 0.11  Recall: 0.17  F1-score: 0.13  Support: 2817
+Accuracy: 0.99
+macro avg    Precision: 0.55  Recall: 0.58  F1-score: 0.57  Support: 1192311
+weighted avg Precision: 1.00  Recall: 0.99  F1-score: 1.00  Support: 1192311
+📊 Creating feature importance plot...
+📁 Loading new test data...
+🔧 Optimizing data types to save memory (using float32)...
+💾 Memory optimized: 251.1MB → 74.1MB
+💰 Saved: 177.0MB (70.5%) - Using float32
+🔧 New test data converted to float32
+🧹 Memory cleared. Available: 39.3GB (57.3% used)
+
+📦 Dữ liệu mới: 180,367 bản ghi (0: 180,367 - 100.00%, 1: 0 - 0.00%)
+
+Báo cáo phân loại (Tập Mới):
+0            Precision: 1.00  Recall: 1.00  F1-score: 1.00  Support: 180367
+1            Precision: 0.00  Recall: 0.00  F1-score: 0.00  Support: 0
+Accuracy: 1.00
+macro avg    Precision: 0.50  Recall: 0.50  F1-score: 0.50  Support: 180367
+weighted avg Precision: 1.00  Recall: 1.00  F1-score: 1.00  Support: 180367
+📄 Generating Word report...
+
+✅ Completed successfully: close_vs_minlow120_r1000_thr0.9_fs1
+📁 Results saved to: output/close_vs_minlow120_r1000_thr0.9/featureset_1
+🧹 Memory cleared. Available: 39.3GB (57.2% used)

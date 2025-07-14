@@ -8,15 +8,15 @@ from tqdm import tqdm
 # ============================
 CLICKHOUSE_CONFIG = {
     'host': '117.0.34.78',
-    'port': 8123,
+    'port': 8124,
     'username': 'looker',
     'password': ''
 }
 
-FILE_PREFIX = "TRX"  
-START_TIME = "2022-05-11 09:00:00.000"              # Thay đổi 
-END_TIME = "2025-03-21 19:50:00.000"                # Thay đổi 
-CSV_PATH = f"data/{FILE_PREFIX}/TRX_2025-06-13_03-54-57.csv"       # Thay đổi 
+FILE_PREFIX = "SOL"  
+START_TIME = "2021-12-20 14:00:00.000"              # Thay đổi 
+END_TIME = "20214-06-20 19:50:00.000"                # Thay đổi 
+CSV_PATH = '/home/shared_data/SOL/SOL_2025-03-01_00-00-00.csv'       # Thay đổi 
 OPEN_TIME_COL = "OpenTime"      
 FLOAT_TOLERANCE = 1e-6
 
@@ -33,7 +33,7 @@ print("\nĐang truy vấn dữ liệu từ ClickHouse...")
 
 QUERY_A = f"""
     SELECT * 
-    FROM binance_data_indicator.trxusdt_1m_forward_ohlc FINAL
+    FROM binance_data_indicator.solusdt_1m_forward_ohlc FINAL
     WHERE OpenTime >= '{START_TIME}' AND OpenTime <= '{END_TIME}'
     ORDER BY OpenTime ASC
     LIMIT 30000
@@ -41,7 +41,7 @@ QUERY_A = f"""
 
 QUERY_B = f"""
     SELECT * 
-    FROM binance_data_indicator.trxusdt_1m_extended FINAL
+    FROM binance_data_indicator.solusdt_1m_extended FINAL
     WHERE OpenTime >= '{START_TIME}' AND OpenTime <= '{END_TIME}'
     ORDER BY OpenTime ASC
     LIMIT 30000
